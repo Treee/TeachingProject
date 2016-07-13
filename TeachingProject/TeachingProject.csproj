@@ -43,11 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Topics\FunThings.cs" />
     <Compile Include="Topics\GenericsPlayground.cs" />
     <Compile Include="Helper\CustomException.cs" />
     <Compile Include="Helper\ExtensionMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Topics\LinqPlayground.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

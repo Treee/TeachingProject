@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TeachingProject.Topics;
 
-namespace TeachingProject
+namespace TeachingProject.Helper
 {   //extension methods are static so the class containing them must also be static (helper library type stuff)
     public static class ExtensionMethods
     {
@@ -124,6 +123,26 @@ namespace TeachingProject
             var destinationList = Activator.CreateInstance<List<TT>>();
             destinationList.AddRange(fromSource.Select(obj => obj.MapTo<T, TT>()));
             return destinationList;
+        }
+
+        public static MyItem MapYourItemToMine1(this YourItem yours)
+        {
+            var temp = new MyItem
+            {
+                MyId = yours.MyId,
+                MyBool = yours.MyBool,
+                MyName = yours.MyName
+            };
+            return temp;
+        }
+
+        public static string MutateString(this string input)
+        {
+            var temp = string.Empty;
+
+            temp += "BLARRRRG" + input;
+
+            return temp;
         }
     }
 }
